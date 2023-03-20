@@ -1,0 +1,31 @@
+CREATE table store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, quantity INTEGER);
+
+INSERT into Store VALUES (1,"hoops","pink",4, 10);
+INSERT into Store VALUES(2, "dice studs", "black&White", 5, 10);
+INSERT into Store VALUES(3,"bears","red",4, 1);
+INSERT into Store VALUES(4,"diamond","yellow",8.99, 6);
+INSERT into Store VALUES(5,"stars","silver",7, 7);
+INSERT into Store VALUES(6,"daisys","white",5, 12);
+INSERT into Store VALUES(7,"moons","gold",3, 5);
+INSERT into Store VALUES(8,"hearts","pink",5, 5);
+INSERT into Store VALUES(9,"peace signs","purple",8, 8);
+INSERT into Store VALUES(10,"aliens","silver",10, 3);
+INSERT into Store VALUES(11,"knives","silver",20, 5);
+INSERT into Store VALUES(12,"emeralds","green",30, 15);
+INSERT into Store VALUES(13,"feather","silver",8, 3);
+INSERT into Store VALUES(14,"crowns","gold",5, 3);
+INSERT into Store VALUES(15,"cross","gold",20, 14);
+
+--How much total inventory?
+SELECT sum(quantity) from store;
+
+--What are the items with lowest invetory so we know what to reorder?
+select *from store where quantity <=5;
+
+--What items do we have that are gold?
+SELECT *from Store where color="gold";
+
+
+
+
+
